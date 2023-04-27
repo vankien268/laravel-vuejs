@@ -1,0 +1,4 @@
+1. store(pinia)
+2. icon của ant design vue
+3. tải fontawsome về cho vào folder src/static. main.js import '...css/all.min.css'
+4. npm i fontawsome vue 3, dùng đc cả bản icon pro. https://www.youtube.com/watch?v=PuvTSR4fK1g&list=PLMkmukSzUsWVmgiRMcx4qKFwJjtxS0TDD&index=11

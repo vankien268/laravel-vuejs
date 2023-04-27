@@ -2,7 +2,10 @@
   <div class="container-fuild">
     <div class="row text-white" style="background: orange; padding:1rem;">
         <div class="col-1 d-flex d-sm-none align-items-center justify-content-center">
-            <span @click="showDrawer()">x</span>
+            <span @click="showDrawer()">
+              <!-- <i class="fa-solid fa-align-justify"></i> -->
+              <font-awesome-icon :icon="['fas', 'align-justify']" />
+            </span>
         </div>
         <div class="col-10 col-sm-9 d-flex align-items-center justify-content-center justify-content-sm-start">
             <!-- justify-content-sm-start đẩy logo về bên trái, align-items-center ở giữa -->
@@ -10,10 +13,15 @@
             <span class="d-none d-sm-flex">QUẢN TRỊ</span>
         </div>
         <div class="col-sm-3 d-none d-sm-flex align-items-center justify-content-sm-end">
-            <span>Admin</span>
+            <span>
+               <!-- <user-outlined class="me-1" />  -->
+               
+               <font-awesome-icon :icon="['fas', 'user']" class="me-1" /> Admin</span>
         </div>
         <div class="col-1 d-flex d-sm-none align-items-center justify-content-center">
-            <span @click="showDrawerUser()">x</span>
+            <span @click="showDrawerUser()">
+              <font-awesome-icon :icon="['fas', 'user']" />
+            </span>
         </div>
     </div>
   </div>
@@ -39,11 +47,13 @@
 </template>
 
 <script>
+// import { UserOutlined } from '@ant-design/icons-vue'
 import { defineComponent, ref } from 'vue';
 import TheMenu from './TheMenu.vue';
 export default defineComponent({
   components: {
-    TheMenu
+    TheMenu,
+    // UserOutlined
   },
   setup() {
     const visible = ref(false);
