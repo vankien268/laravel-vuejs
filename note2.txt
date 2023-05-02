@@ -2,3 +2,8 @@
 2. icon của ant design vue
 3. tải fontawsome về cho vào folder src/static. main.js import '...css/all.min.css'
 4. npm i fontawsome vue 3, dùng đc cả bản icon pro. https://www.youtube.com/watch?v=PuvTSR4fK1g&list=PLMkmukSzUsWVmgiRMcx4qKFwJjtxS0TDD&index=11
+5. axios(axios-http.com) là thư viện của js cho phép xử lý các request thông qua http tại client.
+6. ref() trong composition API vue3. Cho phép tham chiếu để lấy các giá trị, hay nhận giá trị bên trọng và trả về 1 đối tượng.
+vd: users = ref([]), [] là 1 kiểu trả về, [], {}, string "", boolean true, number 0.
+   Khi nhận giá trị tham thiếu tới thì users.value = gtri nhận.
+7. defineCompontent là 1 hàm đc cung cấp bởi Vue 3. Để định nghĩa component với tùy chọn như data, computend, methods, watch(chi tiết xem ping).

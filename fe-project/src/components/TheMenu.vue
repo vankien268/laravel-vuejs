@@ -32,7 +32,7 @@
   >
     <a-menu-item key="admin-settings">
       <router-link :to="{ name: 'admin-settings' }">
-        <span>Cài đặt</span>
+        <span><tag-outlined class="me-1"/>Cài đặt</span>
       </router-link>
     </a-menu-item>
   </a-menu>
@@ -47,7 +47,7 @@ import { useMenu } from "../stores/use-menu.js";
 export default defineComponent({ // định nghĩa các component
   components: {
     UserOutlined,
-    TagOutlined
+    TagOutlined,
     },
   // setup() {
   //   const state = reactive({ // reactive tham chiếu tới các biến bên trong

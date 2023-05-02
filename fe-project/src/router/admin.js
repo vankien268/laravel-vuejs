@@ -7,6 +7,7 @@ const admin = [
         component: LayoutAdmin,
         // thư mục con
         children: [
+            // QL users
             {
                 path: "users",
                 name: "admin-users",
@@ -14,11 +15,19 @@ const admin = [
 
             },
             {
+                path: "users/create",
+                name: "admin-users-create",
+                component: () => import("../pages/admin/users/UserCreate.vue")
+
+            },
+             // QL roles
+            {
                 path: "roles",
                 name: "admin-roles",
                 component: () => import("../pages/admin/roles/RoleIndex.vue")
 
             },
+             // QL settings
             {
                 path: "settings",
                 name: "admin-settings",
