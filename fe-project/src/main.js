@@ -18,6 +18,7 @@ import {
     Select,
     Input,
     InputPassword,
+    Checkbox,
 } from 'ant-design-vue';
 
 import '../src/static/fontawesome/css/all.min.css'; //nên import cách này cho đỡ dài dòng
@@ -48,6 +49,7 @@ app.use(Avatar);
 app.use(Select);
 app.use(Input);
 app.use(InputPassword);
+app.use(Checkbox);
 
 app.mount('#app')
 app.config.globalProperties.$message = message;

@@ -1,13 +1,13 @@
 <template>
-  <a-card title="Tài khoản" style="width: 100%" >
+  <a-card title="Tài khoản" style="width: 100%">
     <div class="row mb-3">
-        <div class="col-12 d-flex justify-content-end">
-            <a-Button type="primary">
-              <router-link :to="{ name: 'admin-users-create' }">
-                <i class="fa-solid fa-plus"></i>
-              </router-link>
-            </a-Button>
-        </div>
+      <div class="col-12 d-flex justify-content-end">
+        <a-Button type="primary">
+          <router-link :to="{ name: 'admin-users-create' }">
+            <i class="fa-solid fa-plus"></i>
+          </router-link>
+        </a-Button>
+      </div>
     </div>
     <div class="row">
       <div class="col-12">
@@ -15,19 +15,26 @@
           <template #bodyCell="{ column, index, record }">
             <template v-if="column.key === 'index'">
               <span>
-                {{ index+1 }}
+                {{ index + 1 }}
               </span>
             </template>
 
             <template v-if="column.key === 'status_name'">
-              <span v-if="record.status_id === 1" class="text-primary"> 
-                    {{ record.status_name }}
+              <span v-if="record.status_id === 1" class="text-primary">
+                {{ record.status_name }}
               </span>
               <span v-else-if="record.status_id === 2" class="text-danger">
-                  {{ record.status_name }}
+                {{ record.status_name }}
               </span>
             </template>
 
+            <template v-if="column.key === 'action'">
+              <router-link :to="{ name:'admin-users-edit', params: {id: record.id} }">
+                <a-button type="primary">
+                  <i class="fa-solid fa-pen-to-square"></i>
+                </a-button>
+              </router-link>
+            </template>
           </template>
         </a-table>
       </div>
@@ -77,7 +84,12 @@ export default defineComponent({
       {
         title: "Tình trạng",
         dataIndex: "status_name",
-        key: 'status_name',
+        key: "status_name",
+      },
+      // cột 6
+      {
+        title: "Hành động",
+        key: "action",
       },
     ];
     const users = ref([]);

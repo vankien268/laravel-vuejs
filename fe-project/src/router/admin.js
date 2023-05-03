@@ -20,6 +20,12 @@ const admin = [
                 component: () => import("../pages/admin/users/UserCreate.vue")
 
             },
+            {
+                path: "users/:id/edit",
+                name: "admin-users-edit",
+                component: () => import("../pages/admin/users/UserEdit.vue")
+
+            },
              // QL roles
             {
                 path: "roles",
