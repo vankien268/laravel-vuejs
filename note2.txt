@@ -7,3 +7,17 @@
 vd: users = ref([]), [] là 1 kiểu trả về, [], {}, string "", boolean true, number 0.
    Khi nhận giá trị tham thiếu tới thì users.value = gtri nhận.
 7. defineCompontent là 1 hàm đc cung cấp bởi Vue 3. Để định nghĩa component với tùy chọn như data, computend, methods, watch(chi tiết xem ping).
+
+BE là 1 sub domain.
+FE là 1 domain chính.
+1. vue router thư viện chính thức của vuejs cho phép định tuyến các url của web: router.vuejs.org
+2. Dynamic import. main.js đôi khi chỉ cần sd module cat ở chỗ cần, nhưng import Cat from... thông thường, r Cat.meow(); nó dạng global, ở đâu cx gọi được thì không nhất thiết.
+const getCat = () => import('./cat.js'). ở chỗ gọi thì getCat().then({meow} => meow());
+3. Lazy loading : giúp rút ngắn gọn kích thước, giảm tốc độ tải xuống nhiều lên tới 17M.
+Để ap dụng lazy loading cho router, thay vì import trực tiếp các component vào router, chúng ta chuyển nó thành dynamic import.
+component chỉ tải xuống khi yêu cầu cần đến. Không thôi nó sẽ dạng global. Như vậy ngt nhập các router tương ứng với các component
+trên thì nó mới tải xuống component đó.
+4.Different History modes(router.vuejs.org)
+5. npm i bootstrap@5.2.0-beta1 import css/grid.min.css với utilities.min.css
+6. Ant design vue.
+7. State Management(store) dùng  State Management pinia thay cho vuex. Tạo project mới nên chuyển sang pinia sử dụng thay cho vuex. (https://pinia.vuejs.org/)
